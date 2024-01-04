@@ -12,7 +12,8 @@
     "build": "webpack --mode production"
   },
   "engines": {
-    "yarn": "1.22.19"
+    "node": "16.16.0",
+    "npm": "8.11.0"
   },
   "dependencies": {
     "@babel/core": "^7.23.7",
@@ -27,9 +28,7 @@
     "react-router-dom": "^6.21.1",
     "react-testing-library": "^8.0.1",
     "serve": "^14.2.1",
-    "webpack-dev-server": "^3.1.0"
-  },
-  "devDependencies": {
+    "webpack-dev-server": "^3.1.0",
     "babel-loader": "8",
     "css-loader": "^2.1.0",
     "html-loader": "^0.5.0",
@@ -37,5 +36,8 @@
     "style-loader": "^0.23.0",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.0"
+  },
+  "devDependencies": {
+    
   }
 }
