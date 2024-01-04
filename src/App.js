@@ -44,7 +44,7 @@ const App = () => {
       <div className="container">
         <Header />
         <Routes>
-          <Route path="/" element={<ActivityFeed activities={activities} setActivities={setActivities}  />} />
+          <Route path="/home" element={<ActivityFeed activities={activities} setActivities={setActivities}  />} />
           <Route path="/archive" element={<Archive />} />
           <Route path="/activity/:activityId" element={<ActivityDetail activities={activities}/>}/>
         </Routes>

@@ -19,7 +19,7 @@ const ActivityDetail = ({ activities }) => {
   });
 
   const goBack = () => {
-    navigate('/');
+    navigate('/home');
   };
 
   return (
