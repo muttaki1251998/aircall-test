@@ -1,0 +1,47 @@
+.activity-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.activity-item:hover {
+    background-color: #F7F7F7;
+}
+
+.activity-meta {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.activity-icon {
+    margin-right: 10px;
+}
+
+.activity-number {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.875rem;
+}
+
+.activity-time {
+    color: #999;
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+
+.archive-icon {
+    margin-left: auto;
+}
+
+.activity-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.archive-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+}

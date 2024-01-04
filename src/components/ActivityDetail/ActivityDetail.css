@@ -1,0 +1,64 @@
+/* ActivityDetail.css */
+.activity-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.activity-description {
+    width: 90%;
+}
+
+.avatar-container {
+    margin: 20px 0;
+}
+
+.avatar {
+    font-size: 100px;
+}
+
+.contact-info-box {
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-label {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.phone-number {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.activity-date {
+    font-size: 1em;
+    color: #999;
+}
+
+.activity-not-found {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 50px;
+}
