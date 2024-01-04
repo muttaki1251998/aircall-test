@@ -8,16 +8,11 @@
   "license": "",
   "private": false,
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
   },
   "engines": {
-    "node": "16.16.0",
-    "npm": "8.11.0"
+    "yarn": "1.22.19"
   },
   "dependencies": {
     "@babel/core": "^7.23.7",
