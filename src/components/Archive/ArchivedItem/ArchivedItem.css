@@ -1,0 +1,53 @@
+.archived-activity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #EAEAEA;
+    cursor: pointer;
+}
+
+.activity-meta {
+    display: flex;
+    align-items: center;
+}
+
+.activity-icon {
+    margin-right: 10px;
+}
+
+.activity-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-number {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.875rem;
+}
+
+.activity-time {
+    color: #999;
+    font-size: 0.75rem;
+}
+
+.unarchive-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.unarchive-icon:active {
+    transform: scale(1.1);
+}
+.unarchive-all-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.unarchive-all-button svg {
+    margin-right: 5px;
+}

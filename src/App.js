@@ -27,6 +27,41 @@ const App = () => {
     }
   };
 
+  const onArchive = async (callId) => {
+    try {
+      await axios.patch(`${BASE_URL}/activities/${callId}`, {
+        is_archived: true,
+      });
+      setActivities((prevActivities) =>
+        prevActivities.map((activity) =>
+          activity.id === callId ? { ...activity, is_archived: true } : activity
+        )
+      );
+    } catch (error) {
+      console.error("Error archiving the call:", error);
+    }
+  };
+
+  const onUnarchive = async (callId) => {
+    try {
+      const response = await axios.patch(`${BASE_URL}/activities/${callId}`, {
+        is_archived: false,
+      });
+
+      if (response.status === 200) {
+        setActivities((prevActivities) =>
+          prevActivities.map((activity) =>
+            activity.id === callId
+              ? { ...activity, is_archived: false }
+              : activity
+          )
+        );
+      }
+    } catch (error) {
+      console.error("Error unarchiving the call:", error);
+    }
+  };
+
   useEffect(() => {
     fetchActivities();
   }, []);
@@ -44,9 +79,30 @@ const App = () => {
       <div className="container">
         <Header />
         <Routes>
-          <Route path="/home" element={<ActivityFeed activities={activities} setActivities={setActivities}  />} />
-          <Route path="/archive" element={<Archive />} />
-          <Route path="/activity/:activityId" element={<ActivityDetail activities={activities}/>}/>
+          <Route
+            path="/"
+            element={
+              <ActivityFeed
+                activities={activities}
+                setActivities={setActivities}
+                onArchive={onArchive}
+              />
+            }
+          />
+          <Route
+            path="/archive"
+            element={
+              <Archive
+                activities={activities}
+                onArchive={onArchive}
+                onUnarchive={onUnarchive}
+              />
+            }
+          />
+          <Route
+            path="/activity/:activityId"
+            element={<ActivityDetail activities={activities} />}
+          />
         </Routes>
         <Navigation />
       </div>

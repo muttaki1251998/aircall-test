@@ -1,0 +1,28 @@
+.archive-feed {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 376px;
+    height: auto;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.date-group {
+    padding: 10px;
+}
+
+.date-header {
+    text-align: center;
+    color: grey;
+    font-size: 0.9rem;
+    margin: 16px 0;
+    padding-left: 10px;
+}
+
+.date-group + .date-group {
+    border-top: 1px solid #EAEAEA;
+}
